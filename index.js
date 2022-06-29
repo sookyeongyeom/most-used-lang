@@ -3,7 +3,7 @@ import { Octokit } from "octokit";
 async function main() {
     // 레포 가져오기
     const octokit = new Octokit({
-        auth: "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",
+        auth: "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",
     });
     const repos = await octokit
         .request("GET /users/{username}/repos", {
@@ -41,6 +41,16 @@ async function main() {
         }
     }
 
+    // 제외
+    delete allLangs["SCSS"];
+    delete allLangs["ShaderLab"];
+    delete allLangs["Dart"];
+    delete allLangs["Shell"];
+    delete allLangs["HLSL"];
+    delete allLangs["Kotlin"];
+    delete allLangs["Objective-C"];
+    delete allLangs["Ruby"];
+
     let arrayLangs = [];
 
     for (let lang in allLangs) {
@@ -49,24 +59,29 @@ async function main() {
 
     arrayLangs.sort((a, b) => allLangs[b] - allLangs[a]);
 
+    let sum = 0;
     for (let lang of arrayLangs) {
         console.log(`${lang} : ${allLangs[lang]}`);
+        sum += allLangs[lang];
     }
+
+    console.log(`sum = ${sum}`);
 
     // 템플릿
     const lines = [
-        `👑 ${arrayLangs[0].toUpperCase()}와 ${
+        `${"🥕  1st".padEnd(11)} ${arrayLangs[0].toUpperCase().padEnd(10)} ${`${
             allLangs[arrayLangs[0]]
-        } 바이트를 함께했습니다 !`,
-        `🥇 ${arrayLangs[1].toUpperCase()} - 정상까지 ${
-            allLangs[arrayLangs[0]] - allLangs[arrayLangs[1]]
-        } 바이트`, //
-        `🥈 ${arrayLangs[2].toUpperCase()} - 정상까지 ${
-            allLangs[arrayLangs[0]] - allLangs[arrayLangs[2]]
-        } 바이트`,
-        `🥉 ${arrayLangs[3].toUpperCase()} - 정상까지 ${
-            allLangs[arrayLangs[0]] - allLangs[arrayLangs[3]]
-        } 바이트`,
+        }`.padStart(10)} bytes  ✨✨✨`,
+        `${"🥕  2nd".padEnd(11)} ${arrayLangs[1].toUpperCase().padEnd(10)} ${`${
+            allLangs[arrayLangs[1]]
+        }`.padStart(10)} bytes`, //
+        `${"🥕  3th".padEnd(11)} ${arrayLangs[2].toUpperCase().padEnd(10)} ${`${
+            allLangs[arrayLangs[2]]
+        }`.padStart(10)} bytes`,
+        `${"🥕  4th".padEnd(11)} ${arrayLangs[3].toUpperCase().padEnd(10)} ${`${
+            allLangs[arrayLangs[3]]
+        }`.padStart(10)} bytes`,
+        `     TOTAL LANGS : ${arrayLangs.length}    TOTAL BYTES : ${sum}`,
     ];
 
     // 1등
@@ -74,7 +89,7 @@ async function main() {
     // gist update
     await octokit.request("PATCH /gists/{gist_id}", {
         gist_id: "6d3f2c0beabf8115bd4acdb400343891",
-        description: `🙋‍♀️ ${most}의 추종자 🙋‍♀️`,
+        description: `🐰 ${most} 없인 못 살아 🐰`,
         files: {
             "README.md": {
                 content: lines.join("\n"),
