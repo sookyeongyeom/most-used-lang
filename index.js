@@ -12,9 +12,10 @@ async function main() {
         .then((repos) => repos.data);
     const repoNames = repos.map((data) => data.name);
 
-    // 레포별 언어 가져오기 (여기를 비동기 병렬 처리해야 함)
+    // 레포별 언어 가져오기 (병렬 처리)
     let arr = [];
-    for (let repoName of repoNames) {
+
+    const fetchRepoLangs = async (repoName) => {
         let data = await octokit.request(
             `GET /repos/{owner}/${repoName}/languages`,
             {
@@ -23,7 +24,11 @@ async function main() {
             }
         );
         arr.push(data.data);
-    }
+    };
+
+    const promises = repoNames.map((repoName) => fetchRepoLangs(repoName));
+    await Promise.all(promises);
+    // console.log(arr);
 
     // 언어별 정리
     let allLangs = {};
