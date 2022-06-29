@@ -1,9 +1,9 @@
-import { Octokit, App } from "octokit";
+import { Octokit } from "octokit";
 
 async function main() {
     // 레포 가져오기
     const octokit = new Octokit({
-        auth: "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",
+        auth: "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",
     });
     const repos = await octokit
         .request("GET /users/{username}/repos", {
@@ -52,6 +52,37 @@ async function main() {
     for (let lang of arrayLangs) {
         console.log(`${lang} : ${allLangs[lang]}`);
     }
+
+    // 템플릿
+    const lines = [
+        `👑 ${arrayLangs[0].toUpperCase()}와 ${
+            allLangs[arrayLangs[0]]
+        } 바이트를 함께했습니다 !`,
+        `🥇 ${arrayLangs[1].toUpperCase()} - 정상까지 ${
+            allLangs[arrayLangs[0]] - allLangs[arrayLangs[1]]
+        } 바이트`, //
+        `🥈 ${arrayLangs[2].toUpperCase()} - 정상까지 ${
+            allLangs[arrayLangs[0]] - allLangs[arrayLangs[2]]
+        } 바이트`,
+        `🥉 ${arrayLangs[3].toUpperCase()} - 정상까지 ${
+            allLangs[arrayLangs[0]] - allLangs[arrayLangs[3]]
+        } 바이트`,
+    ];
+
+    // 1등
+    const most = arrayLangs[0].toUpperCase();
+    // gist update
+    await octokit.request("PATCH /gists/{gist_id}", {
+        gist_id: "6d3f2c0beabf8115bd4acdb400343891",
+        description: `🙋‍♀️ ${most}의 추종자 🙋‍♀️`,
+        files: {
+            "README.md": {
+                content: lines.join("\n"),
+            },
+        },
+    });
+
+    console.log("성공!");
 }
 
 main();
