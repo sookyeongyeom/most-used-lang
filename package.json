@@ -1,0 +1,15 @@
+{
+    "name": "love-lang",
+    "version": "1.0.0",
+    "description": "lang I love most",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "sookyeongyeom",
+    "license": "ISC",
+    "type": "module",
+    "devDependencies": {
+        "octokit": "^1.8.1"
+    }
+}
