@@ -14,8 +14,8 @@ async function main() {
         })
         .then((repos) => repos.data);
     const repoNames = repos.map((data) => data.name);
+    repoNames = repoNames.filter((ele) => ele !== `${username}.github.io`);
     console.log(repoNames);
-    delete repoNames["sookyeongyeom.github.io"];
 
     // 레포별 언어 가져오기 (병렬 처리)
     let arr = [];
