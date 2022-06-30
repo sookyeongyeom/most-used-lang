@@ -17,6 +17,7 @@ async function main() {
 
     // 레포별 언어 가져오기 (병렬 처리)
     let arr = [];
+    let check = [];
 
     const fetchRepoLangs = async (repoName) => {
         let data = await octokit.request(
@@ -26,12 +27,14 @@ async function main() {
                 repo: repoName,
             }
         );
+        check.push(data);
         arr.push(data.data);
     };
 
     const promises = repoNames.map((repoName) => fetchRepoLangs(repoName));
     await Promise.all(promises);
     // console.log(arr);
+    console.log(check);
 
     // 언어별 정리
     let allLangs = {};
