@@ -92,7 +92,7 @@ async function main() {
     // gist update
     await octokit.request("PATCH /gists/{gist_id}", {
         gist_id: process.env.GIST_ID,
-        description: `🐰 ${most} 없인 못 살아 ! 🐰`,
+        description: `🐰 ${most} 없인 못 살아 🐰`,
         files: {
             "Langs I love": {
                 content: lines.join("\n"),
