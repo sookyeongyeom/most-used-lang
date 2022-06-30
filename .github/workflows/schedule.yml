@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:  
-        node-version: [12.x]
+        node-version: [16.x]
 
     steps:
     - uses: actions/checkout@v3
@@ -28,5 +28,3 @@ jobs:
         USER_NAME: ${{ secrets.USER_NAME }}
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
         GIST_ID: ${{ secrets.GIST_ID }}
-    - name: Is Working?
-      run: echo "Success!"
