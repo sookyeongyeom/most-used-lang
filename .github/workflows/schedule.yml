@@ -3,7 +3,7 @@ name: Schedule
 on:
   push:
     branches: [ master ]
-  schedule:
+  schedule:  
         - cron: '*/20 * * * *'    
 
 jobs:
