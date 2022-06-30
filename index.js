@@ -79,16 +79,16 @@ async function main() {
 
     // 템플릿
     const lines = [
-        `${"🥕  1st".padEnd(13)} ${arrayLangs[0].toUpperCase().padEnd(10)} ${`${
+        `${"🥕  1st".padEnd(11)} ${arrayLangs[0].toUpperCase().padEnd(10)} ${`${
             allLangs[arrayLangs[0]]
         }`.padStart(10)} bytes  ✨✨✨`,
-        `${"🥕  2nd".padEnd(13)} ${arrayLangs[1].toUpperCase().padEnd(10)} ${`${
+        `${"🥕  2nd".padEnd(11)} ${arrayLangs[1].toUpperCase().padEnd(10)} ${`${
             allLangs[arrayLangs[1]]
         }`.padStart(10)} bytes`, //
-        `${"🥕  3th".padEnd(13)} ${arrayLangs[2].toUpperCase().padEnd(10)} ${`${
+        `${"🥕  3th".padEnd(11)} ${arrayLangs[2].toUpperCase().padEnd(10)} ${`${
             allLangs[arrayLangs[2]]
         }`.padStart(10)} bytes`,
-        `${"🥕  4th".padEnd(13)} ${arrayLangs[3].toUpperCase().padEnd(10)} ${`${
+        `${"🥕  4th".padEnd(11)} ${arrayLangs[3].toUpperCase().padEnd(10)} ${`${
             allLangs[arrayLangs[3]]
         }`.padStart(10)} bytes`,
         `     TOTAL LANGS : ${arrayLangs.length}    TOTAL BYTES : ${sum}`,
