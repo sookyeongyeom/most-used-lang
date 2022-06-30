@@ -27,7 +27,9 @@ async function main() {
                 repo: repoName,
             }
         );
-        check.push({ repoName: data.data });
+        let obj = {};
+        obj[repoName] = data.data;
+        check.push(obj);
         arr.push(data.data);
     };
 
