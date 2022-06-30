@@ -14,6 +14,7 @@ async function main() {
         })
         .then((repos) => repos.data);
     const repoNames = repos.map((data) => data.name);
+    delete repoNames[`${process.env.USER_NAME}.github.io`];
 
     // 레포별 언어 가져오기 (병렬 처리)
     let arr = [];
