@@ -94,7 +94,7 @@ async function main() {
         gist_id: process.env.GIST_ID,
         description: `🐰 ${most} 없인 못 살아 🐰`,
         files: {
-            "Langs I love": {
+            "Most Used Lang": {
                 content: lines.join("\n"),
             },
         },
