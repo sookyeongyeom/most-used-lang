@@ -1,13 +1,16 @@
 import { Octokit } from "octokit";
 
 async function main() {
+    // username
+    const username = process.env.USER_NAME;
+
     // 레포 가져오기
     const octokit = new Octokit({
-        auth: "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",
+        auth: process.env.GH_TOKEN,
     });
     const repos = await octokit
         .request("GET /users/{username}/repos", {
-            username: "sookyeongyeom",
+            username: username,
         })
         .then((repos) => repos.data);
     const repoNames = repos.map((data) => data.name);
@@ -19,7 +22,7 @@ async function main() {
         let data = await octokit.request(
             `GET /repos/{owner}/${repoName}/languages`,
             {
-                owner: "sookyeongyeom",
+                owner: username,
                 repo: repoName,
             }
         );
@@ -88,10 +91,10 @@ async function main() {
     const most = arrayLangs[0].toUpperCase();
     // gist update
     await octokit.request("PATCH /gists/{gist_id}", {
-        gist_id: "6d3f2c0beabf8115bd4acdb400343891",
+        gist_id: process.env.GIST_ID,
         description: `🐰 ${most} 없인 못 살아 🐰`,
         files: {
-            "README.md": {
+            "Langs I love": {
                 content: lines.join("\n"),
             },
         },
