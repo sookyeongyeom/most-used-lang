@@ -1,6 +1,8 @@
 name: Schedule
 
 on:
+  push:
+    branches: [ master ]
   schedule:
         - cron: '*/20 * * * *'    
 
