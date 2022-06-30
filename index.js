@@ -27,7 +27,7 @@ async function main() {
                 repo: repoName,
             }
         );
-        check.push(data);
+        check.push({ repoName: data.data });
         arr.push(data.data);
     };
 
