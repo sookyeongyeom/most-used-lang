@@ -13,7 +13,7 @@ async function main() {
             username: username,
         })
         .then((repos) => repos.data);
-    const repoNames = repos.map((data) => data.name);
+    let repoNames = repos.map((data) => data.name);
     repoNames = repoNames.filter((ele) => ele !== `${username}.github.io`);
     console.log(repoNames);
 
