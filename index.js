@@ -1,4 +1,6 @@
 import { Octokit } from "octokit";
+import drawBar from "./bar.js";
+import calcPer from "./per.js";
 
 async function main() {
     // username
@@ -77,18 +79,23 @@ async function main() {
 
     console.log(`sum = ${sum}`);
 
+    const bar1 = bar(per(bar1, sum));
+    const bar2 = bar(per(bar2, sum));
+    const bar3 = bar(per(bar3, sum));
+    const bar4 = bar(per(bar4, sum));
+
     // 템플릿
     const lines = [
-        `${"🥕  1st".padEnd(11)} ${arrayLangs[0].toUpperCase().padEnd(10)} ${`${
+        `${"🥕  1st".padEnd(11)} ${arrayLangs[0].toUpperCase().padEnd(10)} ${bar1} ${`${
             allLangs[arrayLangs[0]]
         }`.padStart(10)} bytes  ✨✨✨`,
-        `${"🥕  2nd".padEnd(11)} ${arrayLangs[1].toUpperCase().padEnd(10)} ${`${
+        `${"🥕  2nd".padEnd(11)} ${arrayLangs[1].toUpperCase().padEnd(10)} ${bar2} ${`${
             allLangs[arrayLangs[1]]
         }`.padStart(10)} bytes`, //
-        `${"🥕  3th".padEnd(11)} ${arrayLangs[2].toUpperCase().padEnd(10)} ${`${
+        `${"🥕  3th".padEnd(11)} ${arrayLangs[2].toUpperCase().padEnd(10)} ${bar3} ${`${
             allLangs[arrayLangs[2]]
         }`.padStart(10)} bytes`,
-        `${"🥕  4th".padEnd(11)} ${arrayLangs[3].toUpperCase().padEnd(10)} ${`${
+        `${"🥕  4th".padEnd(11)} ${arrayLangs[3].toUpperCase().padEnd(10)} ${bar4} ${`${
             allLangs[arrayLangs[3]]
         }`.padStart(10)} bytes`,
         `     TOTAL LANGS : ${arrayLangs.length}    TOTAL BYTES : ${sum}`,
