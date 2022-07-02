@@ -79,25 +79,27 @@ async function main() {
 
     console.log(`sum = ${sum}`);
 
-    const bar1 = bar(per(allLangs[arrayLangs[0]], sum));
-    const bar2 = bar(per(allLangs[arrayLangs[1]], sum));
-    const bar3 = bar(per(allLangs[arrayLangs[2]], sum));
-    const bar4 = bar(per(allLangs[arrayLangs[3]], sum));
+    const byte1 = allLangs[arrayLangs[0]];
+    const byte2 = allLangs[arrayLangs[1]];
+    const byte3 = allLangs[arrayLangs[2]];
+    const byte4 = allLangs[arrayLangs[3]];
+
+    const per1 = per(byte1);
+    const per2 = per(byte2);
+    const per3 = per(byte3);
+    const per4 = per(byte4);
+
+    const bar1 = bar(per1);
+    const bar2 = bar(per2);
+    const bar3 = bar(per3);
+    const bar4 = bar(per4);
 
     // 템플릿
     const lines = [
-        `${"🥕  1st".padEnd(11)} ${arrayLangs[0].toUpperCase().padEnd(10)} ${bar1} ${`${
-            allLangs[arrayLangs[0]]
-        }`.padStart(10)} bytes  ✨✨✨`,
-        `${"🥕  2nd".padEnd(11)} ${arrayLangs[1].toUpperCase().padEnd(10)} ${bar2} ${`${
-            allLangs[arrayLangs[1]]
-        }`.padStart(10)} bytes`, //
-        `${"🥕  3th".padEnd(11)} ${arrayLangs[2].toUpperCase().padEnd(10)} ${bar3} ${`${
-            allLangs[arrayLangs[2]]
-        }`.padStart(10)} bytes`,
-        `${"🥕  4th".padEnd(11)} ${arrayLangs[3].toUpperCase().padEnd(10)} ${bar4} ${`${
-            allLangs[arrayLangs[3]]
-        }`.padStart(10)} bytes`,
+        `${"🥕  1st".padEnd(11)} ${arrayLangs[0].toUpperCase().padEnd(10)} ${bar1} ${byte1.padStart(10)} bytes ${per1}%`,
+        `${"🥕  2nd".padEnd(11)} ${arrayLangs[1].toUpperCase().padEnd(10)} ${bar2} ${byte2.padStart(10)} bytes ${per2}%`,
+        `${"🥕  3th".padEnd(11)} ${arrayLangs[2].toUpperCase().padEnd(10)} ${bar3} ${byte3.padStart(10)} bytes ${per3}%`,
+        `${"🥕  4th".padEnd(11)} ${arrayLangs[3].toUpperCase().padEnd(10)} ${bar4} ${byte4.padStart(10)} bytes ${per4}%`,
         `     TOTAL LANGS : ${arrayLangs.length}    TOTAL BYTES : ${sum}`,
     ];
 
