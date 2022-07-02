@@ -96,10 +96,10 @@ async function main() {
 
     // 템플릿
     const lines = [
-        `${"🥕  1st".padEnd(11)} ${arrayLangs[0].toUpperCase().padEnd(10)} ${bar1} ${`${byte1}`.padStart(10)} bytes ${per1}%`,
-        `${"🥕  2nd".padEnd(11)} ${arrayLangs[1].toUpperCase().padEnd(10)} ${bar2} ${`${byte2}`.padStart(10)} bytes ${per2}%`,
-        `${"🥕  3th".padEnd(11)} ${arrayLangs[2].toUpperCase().padEnd(10)} ${bar3} ${`${byte3}`.padStart(10)} bytes ${per3}%`,
-        `${"🥕  4th".padEnd(11)} ${arrayLangs[3].toUpperCase().padEnd(10)} ${bar4} ${`${byte4}`.padStart(10)} bytes ${per4}%`,
+        `${"🥕  1st".padEnd(11)} ${arrayLangs[0].toUpperCase().padEnd(10)} ${bar1} ${`${byte1}`.padStart(10)} bytes ${per1.toFixed(1)}%`,
+        `${"🥕  2nd".padEnd(11)} ${arrayLangs[1].toUpperCase().padEnd(10)} ${bar2} ${`${byte2}`.padStart(10)} bytes ${per2.toFixed(1)}%`,
+        `${"🥕  3th".padEnd(11)} ${arrayLangs[2].toUpperCase().padEnd(10)} ${bar3} ${`${byte3}`.padStart(10)} bytes ${per3.toFixed(1)}%`,
+        `${"🥕  4th".padEnd(11)} ${arrayLangs[3].toUpperCase().padEnd(10)} ${bar4} ${`${byte4}`.padStart(10)} bytes ${per4.toFixed(1)}%`,
         `     TOTAL LANGS : ${arrayLangs.length}    TOTAL BYTES : ${sum}`,
     ];
 
