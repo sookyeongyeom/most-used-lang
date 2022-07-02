@@ -96,10 +96,10 @@ async function main() {
 
     // 템플릿
     const lines = [
-        `${"🥕 1st".padEnd(8)} ${arrayLangs[0].toUpperCase().padEnd(7)} ${bar1} ${`${byte1}`.padStart(7)} ${per1.toFixed(1)}%`,
-        `${"🥕 2nd".padEnd(8)} ${arrayLangs[1].toUpperCase().padEnd(7)} ${bar2} ${`${byte2}`.padStart(7)} ${per2.toFixed(1)}%`,
-        `${"🥕 3th".padEnd(8)} ${arrayLangs[2].toUpperCase().padEnd(7)} ${bar3} ${`${byte3}`.padStart(7)} ${per3.toFixed(1)}%`,
-        `${"🥕 4th".padEnd(8)} ${arrayLangs[3].toUpperCase().padEnd(7)} ${bar4} ${`${byte4}`.padStart(7)} ${per4.toFixed(1)}%`,
+        `${"🥕 1st".padEnd(8)} ${arrayLangs[0].toUpperCase().padEnd(7)} ${bar1} ${`${byte1}`.padStart(7)} ${`${per1.toFixed(1)}`.padStart(5)}%`,
+        `${"🥕 2nd".padEnd(8)} ${arrayLangs[1].toUpperCase().padEnd(7)} ${bar2} ${`${byte2}`.padStart(7)} ${`${per2.toFixed(1)}`.padStart(5)}%`,
+        `${"🥕 3th".padEnd(8)} ${arrayLangs[2].toUpperCase().padEnd(7)} ${bar3} ${`${byte3}`.padStart(7)} ${`${per3.toFixed(1)}`.padStart(5)}%`,
+        `${"🥕 4th".padEnd(8)} ${arrayLangs[3].toUpperCase().padEnd(7)} ${bar4} ${`${byte4}`.padStart(7)} ${`${per4.toFixed(1)}`.padStart(5)}%`,
         `     TOTAL LANGS : ${arrayLangs.length}    TOTAL BYTES : ${sum}`,
     ];
 
