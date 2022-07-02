@@ -1,6 +1,6 @@
 # 🐰 ${most_used_lang} 없인 못 살아 
 
-<img src="https://user-images.githubusercontent.com/98504939/176718897-69df3001-198e-4dbb-a77d-9bbcb707cd89.png" width=70%>
+<img alt="most-used-lang" src="https://user-images.githubusercontent.com/98504939/176718897-69df3001-198e-4dbb-a77d-9bbcb707cd89.png" width=70%>
 
 ## 기본 기능
 - [X] 자신의 public 레포 목록 긁어오기
@@ -15,6 +15,5 @@
 - [X] github secrets 설정하여 환경 변수로 사용할 수 있도록 
 
 ## 추가할 기능
-- [ ] 차지하는 비율을 퍼센트로 환산해서 그래프 출력
-- [ ] 포맷 좀 더 예쁘게... 어떻게 안될까ㅎ
+- [X] 차지하는 비율을 퍼센트로 환산해서 bar 출력
 - [ ] Fork 자동 제외
