@@ -79,10 +79,10 @@ async function main() {
 
     console.log(`sum = ${sum}`);
 
-    const bar1 = bar(per(bar1, sum));
-    const bar2 = bar(per(bar2, sum));
-    const bar3 = bar(per(bar3, sum));
-    const bar4 = bar(per(bar4, sum));
+    const bar1 = bar(per(allLangs[arrayLangs[0]], sum));
+    const bar2 = bar(per(allLangs[arrayLangs[1]], sum));
+    const bar3 = bar(per(allLangs[arrayLangs[2]], sum));
+    const bar4 = bar(per(allLangs[arrayLangs[3]], sum));
 
     // 템플릿
     const lines = [
