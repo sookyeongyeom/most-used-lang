@@ -1,6 +1,6 @@
 import { Octokit } from "octokit";
-import drawBar from "./bar.js";
-import calcPer from "./per.js";
+import bar from "./bar.js";
+import per from "./per.js";
 
 async function main() {
     // username
