@@ -100,7 +100,7 @@ async function main() {
         `${"🥕  2nd".padEnd(9)} ${arrayLangs[1].toUpperCase().padEnd(6)} ${bar2} ${`${byte2}`.padStart(8)} ${`${per2.toFixed(1)}`.padStart(6)}%`,
         `${"🥕  3th".padEnd(9)} ${arrayLangs[2].toUpperCase().padEnd(6)} ${bar3} ${`${byte3}`.padStart(8)} ${`${per3.toFixed(1)}`.padStart(6)}%`,
         `${"🥕  4th".padEnd(9)} ${arrayLangs[3].toUpperCase().padEnd(6)} ${bar4} ${`${byte4}`.padStart(8)} ${`${per4.toFixed(1)}`.padStart(6)}%`,
-        `           TOTAL LANGS : ${arrayLangs.length}    TOTAL BYTES : ${sum}`,
+        `             TOTAL LANGS : ${arrayLangs.length}    TOTAL BYTES : ${sum}`,
     ];
 
     // 1등
