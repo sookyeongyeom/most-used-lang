@@ -84,10 +84,10 @@ async function main() {
     const byte3 = allLangs[arrayLangs[2]];
     const byte4 = allLangs[arrayLangs[3]];
 
-    const per1 = per(byte1);
-    const per2 = per(byte2);
-    const per3 = per(byte3);
-    const per4 = per(byte4);
+    const per1 = per(byte1, sum);
+    const per2 = per(byte2, sum);
+    const per3 = per(byte3, sum);
+    const per4 = per(byte4, sum);
 
     const bar1 = bar(per1);
     const bar2 = bar(per2);
