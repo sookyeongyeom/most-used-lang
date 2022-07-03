@@ -1,6 +1,6 @@
 # 🐰 ${most_used_lang} 없인 못 살아 
 
-<img alt="most-used-lang" src="https://user-images.githubusercontent.com/98504939/176718897-69df3001-198e-4dbb-a77d-9bbcb707cd89.png" width=70%>
+<img width="758" alt="most-used-lang" src="https://user-images.githubusercontent.com/98504939/177053751-413c70e2-8ed0-4020-aaaa-74b047ef5164.png">
 
 ## 기본 기능
 - [X] 자신의 public 레포 목록 긁어오기
