@@ -98,16 +98,16 @@ async function main() {
     const lines = [
         `${"🥕  1st".padEnd(9)} ${arrayLangs[0]
             .toUpperCase()
-            .padEnd(6)} ${bar1} ${`${per1.toFixed(1)}`.padStart(6)}%`,
+            .padEnd(10)} ${bar1} ${`${per1.toFixed(1)}`.padStart(6)}%`,
         `${"🥕  2nd".padEnd(9)} ${arrayLangs[1]
             .toUpperCase()
-            .padEnd(6)} ${bar2} ${`${per2.toFixed(1)}`.padStart(6)}%`,
+            .padEnd(10)} ${bar2} ${`${per2.toFixed(1)}`.padStart(6)}%`,
         `${"🥕  3th".padEnd(9)} ${arrayLangs[2]
             .toUpperCase()
-            .padEnd(6)} ${bar3} ${`${per3.toFixed(1)}`.padStart(6)}%`,
+            .padEnd(10)} ${bar3} ${`${per3.toFixed(1)}`.padStart(6)}%`,
         `${"🥕  4th".padEnd(9)} ${arrayLangs[3]
             .toUpperCase()
-            .padEnd(6)} ${bar4} ${`${per4.toFixed(1)}`.padStart(6)}%`,
+            .padEnd(10)} ${bar4} ${`${per4.toFixed(1)}`.padStart(6)}%`,
         `      TOTAL LANGS : ${arrayLangs.length}    TOTAL BYTES : ${sum}`,
     ];
 
