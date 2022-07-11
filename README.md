@@ -10,7 +10,7 @@
 - [X] gist 렌더링
 - [X] 가장 많이 사용한 언어로 gist 제목 출력 - 🐰 ${most_used_lang} 없인 못 살아 🐰
 
-## 빌드 관련
+## 빌드 관련 
 - [X] workflow 생성하여 master 브랜치로 푸시한 경우 || 매 자정마다 자동으로 빌드되도록
 - [X] github secrets 설정하여 환경 변수로 사용할 수 있도록 
 
